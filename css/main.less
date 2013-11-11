@@ -1,0 +1,718 @@
+/************************************************
+ *
+ *    Import all dependancies
+ *
+ ************************************************/
+@import url(lib/reset.less);
+
+
+/************************************************
+ *
+ *    Variables & Mixins
+ *
+ ************************************************/
+@white: #ffffff;
+@black: #000000;
+@ltGray: #F2F2F2;
+
+.clear {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  line-height: 0;
+}
+
+.fontSize8 { font-size: 0.667em; }
+.fontSize10 { font-size: 0.834em; }
+.fontSize12 { font-size: 1em; }
+.fontSize16 { font-size: 1.334em; }
+.fontSize18 { font-size: 1.5em; }
+.fontSize20 { font-size: 1.667em; }
+.fontSize24 { font-size: 2em; }
+
+
+/************************************************
+ *
+ *    Global Styles
+ *
+ ************************************************/
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body {
+  background: @white;
+  font-family: 'sangbleu_sanslight', arial, helvetica, sans-serif;
+  color: @black;
+  font-size: 12px;
+  line-height: 1.4;
+  word-spacing: 2px;
+
+  a {
+    color: @black;
+    text-decoration: none;
+    outline: none;
+    display: inline-block;
+    vertical-align: top;
+
+    &:hover {}
+
+    &:active,
+    &:visited {
+      outline: none;
+      text-decoration: none;
+    }
+  }
+
+  h1 {
+    text-transform: uppercase;
+    .fontSize18;
+  }
+
+  p { margin-bottom: 15px; }
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  strong { font-weight: 700; }
+
+  .wrapper {
+    width: 73%;
+    max-width: 749px;
+    position: relative;
+    margin: 0 auto;
+
+    .content {
+      background-color: @ltGray;
+      position: relative;
+      //overflow: hidden;
+      height: 500px;
+      max-height: 500px;
+      max-width: 750px;
+
+      .section {
+        overflow: hidden;
+
+        &:after { .clear; }
+      }
+    }
+  }
+}
+
+.upper { text-transform: uppercase; }
+
+.arrow-previous,
+.arrow-next {
+  display: block;
+  width: 16px;
+  height: 72px;
+  position: absolute;
+  top: 50%;
+  margin-top: -36px;
+  text-indent: -9999px;
+}
+
+.arrow-previous {
+  background: url(../img/arrow-prev.png) no-repeat 0 0;
+  left: -10%;
+}
+
+.arrow-next {
+  background: url(../img/arrow-next.png) no-repeat 0 0;
+  right: -10%;
+}
+
+
+/************************************************
+ *
+ *    Header & Navigation Styles
+ *
+ ************************************************/
+.header {
+  text-align: center;
+  margin: 40px auto 15px;
+  
+  .logo {
+    display: block;
+    width: 238px;
+    margin: 0 auto 40px;
+  }
+}
+
+/* Navigation Styles */
+.nav {
+  zoom: 1;
+
+  &:after { .clear; }
+
+  li {
+    float: left;
+    width: 100%/3;
+    text-align: center;
+    position: relative;
+
+    h5 { cursor: default; }
+
+    a,
+    h5 {
+      display: inline-block;
+      text-transform: uppercase;
+    }
+
+    .dropdown {
+      display: none;
+      background: @white;
+      width: 171px;
+      margin-left: -30%;
+      padding: 45px 10% 20px;
+      position: absolute;
+      top: 15px;
+      left: 50%;
+      z-index: 10;
+      text-align: right;
+
+      h3 {
+        text-transform: uppercase;
+        margin-bottom: 30px;
+      }
+
+      ul {
+
+        li {
+          width: auto;
+          text-align: right;
+          float: none;
+
+          &:last-child { margin-bottom: 0; }
+
+          a {
+            line-height: 24px;
+            height: 24px;
+            vertical-align: middle;
+
+            &:hover {}
+          }
+        }
+      }
+    }
+
+    &.nav-1 {
+      
+      .dropdown {
+        margin-left: -21%;
+      }
+    }
+    
+    &.nav-2 {
+      
+      .dropdown {
+        margin-left: -30%;
+      }
+    }
+    
+    &.nav-3 {}
+
+    &:hover {
+
+      .dropdown { display: block; }
+    }
+  }
+}
+
+
+/************************************************
+ *
+ *    Footer Styles
+ *
+ ************************************************/
+.footer {
+  position: relative;
+  margin: 20px auto 7px;
+
+  .nav {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .copyright {
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 5px;
+    right: -5%;
+    margin: 0;
+    .fontSize8;
+  }
+}
+
+
+/************************************************
+ *
+ *    Campaign Section Styles
+ *
+ ************************************************/
+.campaign-page {
+
+  .content {
+    text-align: center;
+
+    h1 { margin-bottom: 25px; }
+    p{ .fontSize10; }
+  }
+}
+
+
+/************************************************
+ *
+ *    Contact Section Styles
+ *
+ ************************************************/
+.contact-page {
+
+  .content {
+    padding: 100px 14% 0;
+    text-align: center;
+    overflow-y: scroll;
+
+    h1 { margin-bottom: 25px; }
+    p{ .fontSize10; }
+  }
+}
+
+
+/************************************************
+ *
+ *    HomePage Section Styles
+ *
+ ************************************************/
+.home-page {
+}
+
+
+/************************************************
+ *
+ *    Inspiration Section Styles
+ *
+ ************************************************/
+.inspiration-page {
+
+  .content {
+    background: url(../img/inspiration-main-bg.jpg) no-repeat center;
+    color: @white;
+    padding: 100px 0 0 13%;
+    overflow-x: scroll;
+
+    .inspiration-text {
+      padding: 100px 0 0 13%;
+
+      h1 { margin-bottom: 15px; }
+
+      h1,
+      p {
+        width: 144px;
+      }
+
+      p { .fontSize10; }
+    }
+  }
+}
+
+
+/************************************************
+ *
+ *    Legal Section Styles
+ *
+ ************************************************/
+.legal-page {
+
+  .content {
+    padding: 100px 14% 0;
+    text-align: center;
+    overflow-y: scroll;
+
+    h1 { margin-bottom: 25px; }
+
+    p {
+      font-weight: 700;
+      .fontSize10;
+    }
+  }
+}
+
+
+/************************************************
+ *
+ *    Looks Section Styles
+ *
+ ************************************************/
+.looks-page {
+  
+  .content {
+    text-align: center;
+
+    .featured-looks-container {
+      width: 746px;
+      overflow-x: hidden;
+    }
+
+    ul {
+
+      &:after { .clear; }
+
+      li {
+        float: left;
+        height: auto;
+        position: relative;
+
+        .summary {
+          background: rgba(0, 0, 0, 0.34);
+          width: 50px;
+          height: 50px;
+          color: @white;
+          padding: 10px;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          opacity: 0;
+          -webkit-transition: opacity 0.25s ease-in-out;
+          -moz-transition: opacity 0.25s ease-in-out;
+          -ms-transition: opacity 0.25s ease-in-out;
+          -o-transition: opacity 0.25s ease-in-out;
+          transition: opacity 0.25s ease-in-out;
+        }
+
+        &:hover {
+
+          .summary { opacity: 1; }
+        }
+      }
+
+      &.featured-looks {
+        margin-bottom: 20px;
+        width: 10000px;
+
+        &:after { .clear; }
+
+        li {
+          width: 245px;
+          margin: 0 0 5px 5px;
+
+          &:first-child { margin-left: 0; }
+          //&:nth-child(3n + 1) { margin-left: 0; }
+        }
+      }
+
+      &.featured-looks-2 {
+
+        li {
+          width: 16%;
+          margin: 0 0 5px 0.8%;
+
+          &:nth-child(6n + 1) { margin-left: 0; }
+        }
+      }
+    }
+  }
+}
+
+
+/************************************************
+ *
+ *    Newsletter Section Styles
+ *
+ ************************************************/
+.newsletter-page {
+
+  .content {
+    padding: 100px 14% 0;
+    text-align: center;
+    overflow-y: scroll;
+
+    .main-content {
+      width: 43.475%;
+      margin: 0 auto;
+      
+      h1 { margin-bottom: 30px; }
+
+      p {
+        text-transform: uppercase;
+        margin-bottom: 45px;
+        .fontSize10;
+      }
+
+      form {
+
+        label {
+          display: block;
+          text-transform: uppercase;
+          margin-bottom: 8px;
+          .fontSize10;
+        }
+
+        input {
+          display: block;
+          .fontSize10;
+
+          &[type="text"] {
+            width: 100%;
+            height: 20px;
+            margin-bottom: 15px;
+            border: 1px solid @black;
+            background: @ltGray;
+            outline: none;
+          }
+
+          &.name-input {}
+          &.email-input {}
+          &.btn-subscribe {
+            background: @black;
+            border: none 0;
+            color: @white;
+            text-transform: uppercase;
+            display: block;
+            margin: 0 auto 0;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/************************************************
+ *
+ *    Stores Section Styles
+ *
+ ************************************************/
+.stores-page {
+
+  .content {
+    padding: 35px 10% 0;
+    text-align: center;
+    height: auto !important;
+
+    ul {
+
+      &:after { .clear; }
+
+      li {
+        width: 49%;
+        float: left;
+        margin-bottom: 5px;
+
+        &:nth-child(even) { margin-left: 2%; }
+
+        a {
+
+          img {
+            margin-bottom: 7px;
+          }
+
+          h4 {
+            text-transform: uppercase;
+            text-align: left;
+            height: 35px;
+            font-size: 0.75em;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ****************
+  Individual Stores
+***************** */
+.la-store-page,
+.ny-store-page,
+.london-store-page,
+.paris-store-page {
+
+  .contact-info {
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+
+    h3 {}
+
+    p { margin-bottom: 0; }
+  }
+}
+
+/* *********************
+  LA Store Page
+********************** */
+.la-store-page {}
+
+/* *********************
+  NY Store Page
+********************** */
+.ny-store-page {}
+
+/* *********************
+  Paris Store Page
+********************* */
+.paris-store-page {}
+
+/* *********************
+  London Store Page
+********************** */
+.london-store-page {}
+
+
+/* **********************************************
+ *
+ *    Carousel Styles
+ *
+ ********************************************** */
+.carousel {
+  position: relative;
+  width: 100%;
+
+  &:after { .clear; }
+
+  li {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+
+/* ***********************************************
+ *
+ *    Hover State image background Styles
+ *
+ *********************************************** */
+.hover-img-container {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.campaign-hover,
+.contact-hover,
+.inspiration-hover,
+.legal-hover,
+.looks-hover,
+.newsletter-hover,
+.stores-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+}
+
+.looks-hover {
+  background: @white;
+  width: 100%;
+  zoom: 1;
+
+  &:after { .clear; }
+
+  img {
+    width: 49.8%;
+
+    &.looks-one {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &.looks-two {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+}
+
+
+
+
+/* ***********************************************
+ *
+ *    Media Query Styles
+ *
+ *********************************************** */
+@media (max-width: 767px) {
+
+  .contact-page .content { padding: 60px 14% 50px; }
+}
+
+@media (max-width: 591px) {
+  .header {
+
+    .nav {
+
+      li {
+
+        &.nav-2 {
+
+          a {}
+
+          .dropdown {
+            top: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .header {
+
+    .nav {
+
+      li {
+
+        &.nav-1 {
+          .dropdown { margin-left: -50%; }
+        }
+
+        &.nav-2 {
+          .dropdown { margin-left: -90%; }
+        }
+
+        a {}
+
+        .dropdown {
+          top: 30px;
+        }
+      }
+    }
+  }
+
+  .footer {
+    
+    .nav {
+      width: 100%;
+
+      li {
+        width: auto;
+        margin-left: 6.6%;
+
+        &:first-child { margin-left: 0; }
+      }
+    }
+    
+    .copyright { bottom: 4px; }
+  }
+}
+
+

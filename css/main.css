@@ -1,0 +1,730 @@
+/************************************************
+ *
+ *    Import all dependancies
+ *
+ ************************************************/
+/*******************************************
+*
+*   Reset Default Styles
+*
+********************************************/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+   Reset all default styles
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/************************************************
+ *
+ *    Variables & Mixins
+ *
+ ************************************************/
+.clear {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  line-height: 0;
+}
+.fontSize8 {
+  font-size: 0.667em;
+}
+.fontSize10 {
+  font-size: 0.834em;
+}
+.fontSize12 {
+  font-size: 1em;
+}
+.fontSize16 {
+  font-size: 1.334em;
+}
+.fontSize18 {
+  font-size: 1.5em;
+}
+.fontSize20 {
+  font-size: 1.667em;
+}
+.fontSize24 {
+  font-size: 2em;
+}
+/************************************************
+ *
+ *    Global Styles
+ *
+ ************************************************/
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+body {
+  background: #ffffff;
+  font-family: 'sangbleu_sanslight', arial, helvetica, sans-serif;
+  color: #000000;
+  font-size: 12px;
+  line-height: 1.4;
+  word-spacing: 2px;
+}
+body a {
+  color: #000000;
+  text-decoration: none;
+  outline: none;
+  display: inline-block;
+  vertical-align: top;
+}
+body a:active,
+body a:visited {
+  outline: none;
+  text-decoration: none;
+}
+body h1 {
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+body p {
+  margin-bottom: 15px;
+}
+body img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+body strong {
+  font-weight: 700;
+}
+body .wrapper {
+  width: 73%;
+  max-width: 749px;
+  position: relative;
+  margin: 0 auto;
+}
+body .wrapper .content {
+  background-color: #f2f2f2;
+  position: relative;
+  height: 500px;
+  max-height: 500px;
+  max-width: 750px;
+}
+body .wrapper .content .section {
+  overflow: hidden;
+}
+body .wrapper .content .section:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  line-height: 0;
+}
+.upper {
+  text-transform: uppercase;
+}
+.arrow-previous,
+.arrow-next {
+  display: block;
+  width: 16px;
+  height: 72px;
+  position: absolute;
+  top: 50%;
+  margin-top: -36px;
+  text-indent: -9999px;
+}
+.arrow-previous {
+  background: url(../img/arrow-prev.png) no-repeat 0 0;
+  left: -10%;
+}
+.arrow-next {
+  background: url(../img/arrow-next.png) no-repeat 0 0;
+  right: -10%;
+}
+/************************************************
+ *
+ *    Header & Navigation Styles
+ *
+ ************************************************/
+.header {
+  text-align: center;
+  margin: 40px auto 15px;
+}
+.header .logo {
+  display: block;
+  width: 238px;
+  margin: 0 auto 40px;
+}
+/* Navigation Styles */
+.nav {
+  zoom: 1;
+}
+.nav:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  line-height: 0;
+}
+.nav li {
+  float: left;
+  width: 33.333333333333336%;
+  text-align: center;
+  position: relative;
+}
+.nav li h5 {
+  cursor: default;
+}
+.nav li a,
+.nav li h5 {
+  display: inline-block;
+  text-transform: uppercase;
+}
+.nav li .dropdown {
+  display: none;
+  background: #ffffff;
+  width: 171px;
+  margin-left: -30%;
+  padding: 45px 10% 20px;
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  z-index: 10;
+  text-align: right;
+}
+.nav li .dropdown h3 {
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.nav li .dropdown ul li {
+  width: auto;
+  text-align: right;
+  float: none;
+}
+.nav li .dropdown ul li:last-child {
+  margin-bottom: 0;
+}
+.nav li .dropdown ul li a {
+  line-height: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+.nav li.nav-1 .dropdown {
+  margin-left: -21%;
+}
+.nav li.nav-2 .dropdown {
+  margin-left: -30%;
+}
+.nav li:hover .dropdown {
+  display: block;
+}
+/************************************************
+ *
+ *    Footer Styles
+ *
+ ************************************************/
+.footer {
+  position: relative;
+  margin: 20px auto 7px;
+}
+.footer .nav {
+  width: 70%;
+  margin: 0 auto;
+}
+.footer .copyright {
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 5px;
+  right: -5%;
+  margin: 0;
+  font-size: 0.667em;
+}
+/************************************************
+ *
+ *    Campaign Section Styles
+ *
+ ************************************************/
+.campaign-page .content {
+  text-align: center;
+}
+.campaign-page .content h1 {
+  margin-bottom: 25px;
+}
+.campaign-page .content p {
+  font-size: 0.834em;
+}
+/************************************************
+ *
+ *    Contact Section Styles
+ *
+ ************************************************/
+.contact-page .content {
+  padding: 100px 14% 0;
+  text-align: center;
+  overflow-y: scroll;
+}
+.contact-page .content h1 {
+  margin-bottom: 25px;
+}
+.contact-page .content p {
+  font-size: 0.834em;
+}
+/************************************************
+ *
+ *    HomePage Section Styles
+ *
+ ************************************************/
+/************************************************
+ *
+ *    Inspiration Section Styles
+ *
+ ************************************************/
+.inspiration-page .content {
+  background: url(../img/inspiration-main-bg.jpg) no-repeat center;
+  color: #ffffff;
+  padding: 100px 0 0 13%;
+  overflow-x: scroll;
+}
+.inspiration-page .content .inspiration-text {
+  padding: 100px 0 0 13%;
+}
+.inspiration-page .content .inspiration-text h1 {
+  margin-bottom: 15px;
+}
+.inspiration-page .content .inspiration-text h1,
+.inspiration-page .content .inspiration-text p {
+  width: 144px;
+}
+.inspiration-page .content .inspiration-text p {
+  font-size: 0.834em;
+}
+/************************************************
+ *
+ *    Legal Section Styles
+ *
+ ************************************************/
+.legal-page .content {
+  padding: 100px 14% 0;
+  text-align: center;
+  overflow-y: scroll;
+}
+.legal-page .content h1 {
+  margin-bottom: 25px;
+}
+.legal-page .content p {
+  font-weight: 700;
+  font-size: 0.834em;
+}
+/************************************************
+ *
+ *    Looks Section Styles
+ *
+ ************************************************/
+.looks-page .content {
+  text-align: center;
+}
+.looks-page .content .featured-looks-container {
+  width: 746px;
+  overflow-x: hidden;
+}
+.looks-page .content ul:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  line-height: 0;
+}
+.looks-page .content ul li {
+  float: left;
+  height: auto;
+  position: relative;
+}
+.looks-page .content ul li .summary {
+  background: rgba(0, 0, 0, 0.34);
+  width: 50px;
+  height: 50px;
+  color: #ffffff;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: opacity 0.25s ease-in-out;
+  -moz-transition: opacity 0.25s ease-in-out;
+  -ms-transition: opacity 0.25s ease-in-out;
+  -o-transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
+}
+.looks-page .content ul li:hover .summary {
+  opacity: 1;
+}
+.looks-page .content ul.featured-looks {
+  margin-bottom: 20px;
+  width: 10000px;
+}
+.looks-page .content ul.featured-looks:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  line-height: 0;
+}
+.looks-page .content ul.featured-looks li {
+  width: 245px;
+  margin: 0 0 5px 5px;
+}
+.looks-page .content ul.featured-looks li:first-child {
+  margin-left: 0;
+}
+.looks-page .content ul.featured-looks-2 li {
+  width: 16%;
+  margin: 0 0 5px 0.8%;
+}
+.looks-page .content ul.featured-looks-2 li:nth-child(6n + 1) {
+  margin-left: 0;
+}
+/************************************************
+ *
+ *    Newsletter Section Styles
+ *
+ ************************************************/
+.newsletter-page .content {
+  padding: 100px 14% 0;
+  text-align: center;
+  overflow-y: scroll;
+}
+.newsletter-page .content .main-content {
+  width: 43.475%;
+  margin: 0 auto;
+}
+.newsletter-page .content .main-content h1 {
+  margin-bottom: 30px;
+}
+.newsletter-page .content .main-content p {
+  text-transform: uppercase;
+  margin-bottom: 45px;
+  font-size: 0.834em;
+}
+.newsletter-page .content .main-content form label {
+  display: block;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  font-size: 0.834em;
+}
+.newsletter-page .content .main-content form input {
+  display: block;
+  font-size: 0.834em;
+}
+.newsletter-page .content .main-content form input[type="text"] {
+  width: 100%;
+  height: 20px;
+  margin-bottom: 15px;
+  border: 1px solid #000000;
+  background: #f2f2f2;
+  outline: none;
+}
+.newsletter-page .content .main-content form input.btn-subscribe {
+  background: #000000;
+  border: none 0;
+  color: #ffffff;
+  text-transform: uppercase;
+  display: block;
+  margin: 0 auto 0;
+  cursor: pointer;
+}
+/************************************************
+ *
+ *    Stores Section Styles
+ *
+ ************************************************/
+.stores-page .content {
+  padding: 35px 10% 0;
+  text-align: center;
+  height: auto !important;
+}
+.stores-page .content ul:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  line-height: 0;
+}
+.stores-page .content ul li {
+  width: 49%;
+  float: left;
+  margin-bottom: 5px;
+}
+.stores-page .content ul li:nth-child(even) {
+  margin-left: 2%;
+}
+.stores-page .content ul li a img {
+  margin-bottom: 7px;
+}
+.stores-page .content ul li a h4 {
+  text-transform: uppercase;
+  text-align: left;
+  height: 35px;
+  font-size: 0.75em;
+}
+/* ****************
+  Individual Stores
+***************** */
+.la-store-page .contact-info,
+.ny-store-page .contact-info,
+.london-store-page .contact-info,
+.paris-store-page .contact-info {
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+}
+.la-store-page .contact-info p,
+.ny-store-page .contact-info p,
+.london-store-page .contact-info p,
+.paris-store-page .contact-info p {
+  margin-bottom: 0;
+}
+/* *********************
+  LA Store Page
+********************** */
+/* *********************
+  NY Store Page
+********************** */
+/* *********************
+  Paris Store Page
+********************* */
+/* *********************
+  London Store Page
+********************** */
+/* **********************************************
+ *
+ *    Carousel Styles
+ *
+ ********************************************** */
+.carousel {
+  position: relative;
+  width: 100%;
+}
+.carousel:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  line-height: 0;
+}
+.carousel li {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+/* ***********************************************
+ *
+ *    Hover State image background Styles
+ *
+ *********************************************** */
+.hover-img-container {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+.campaign-hover,
+.contact-hover,
+.inspiration-hover,
+.legal-hover,
+.looks-hover,
+.newsletter-hover,
+.stores-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+}
+.looks-hover {
+  background: #ffffff;
+  width: 100%;
+  zoom: 1;
+}
+.looks-hover:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  line-height: 0;
+}
+.looks-hover img {
+  width: 49.8%;
+}
+.looks-hover img.looks-one {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.looks-hover img.looks-two {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+/* ***********************************************
+ *
+ *    Media Query Styles
+ *
+ *********************************************** */
+@media (max-width: 767px) {
+  .contact-page .content {
+    padding: 60px 14% 50px;
+  }
+}
+@media (max-width: 591px) {
+  .header .nav li.nav-2 .dropdown {
+    top: 30px;
+  }
+}
+@media (max-width: 450px) {
+  .header .nav li.nav-1 .dropdown {
+    margin-left: -50%;
+  }
+  .header .nav li.nav-2 .dropdown {
+    margin-left: -90%;
+  }
+  .header .nav li .dropdown {
+    top: 30px;
+  }
+  .footer .nav {
+    width: 100%;
+  }
+  .footer .nav li {
+    width: auto;
+    margin-left: 6.6%;
+  }
+  .footer .nav li:first-child {
+    margin-left: 0;
+  }
+  .footer .copyright {
+    bottom: 4px;
+  }
+}
