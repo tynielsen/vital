@@ -1,4 +1,8 @@
 $(window).load(function() {
+  $('.scroll-pane').jScrollPane({
+    autoReinitialise: true,
+    verticalGutter: 0
+  });
 
   //Keeping it responsive while avoiding vertical scroll bars ..always
   var verticalResize = function() {
@@ -104,8 +108,6 @@ $(window).load(function() {
 
       intervalHandler = myInterval();
     });
-  } else {
-    //$('.arrow-next, .arrow-previous').hide();
   }
 
 });

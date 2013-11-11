@@ -400,14 +400,16 @@ body .wrapper .content .section:after {
 .inspiration-page .content {
   background: url(../img/inspiration-main-bg.jpg) no-repeat center;
   color: #ffffff;
-  padding: 100px 0 0 13%;
-  overflow-x: scroll;
+  padding: 0 0 0 13%;
+  overflow: hidden;
 }
 .inspiration-page .content .inspiration-text {
-  padding: 100px 0 0 13%;
+  float: left;
+  width: 180px;
+  height: 499px;
 }
 .inspiration-page .content .inspiration-text h1 {
-  margin-bottom: 15px;
+  margin: 100px 0 15px;
 }
 .inspiration-page .content .inspiration-text h1,
 .inspiration-page .content .inspiration-text p {
@@ -415,6 +417,9 @@ body .wrapper .content .section:after {
 }
 .inspiration-page .content .inspiration-text p {
   font-size: 0.834em;
+}
+.inspiration-page .content .inspiration-text .jspTrack {
+  background: transparent;
 }
 /************************************************
  *

@@ -304,13 +304,15 @@ body {
   .content {
     background: url(../img/inspiration-main-bg.jpg) no-repeat center;
     color: @white;
-    padding: 100px 0 0 13%;
-    overflow-x: scroll;
+    padding: 0 0 0 13%;
+    overflow: hidden;
 
     .inspiration-text {
-      padding: 100px 0 0 13%;
+      float: left;
+      width: 180px;
+      height: 499px;
 
-      h1 { margin-bottom: 15px; }
+      h1 { margin: 100px 0 15px; }
 
       h1,
       p {
@@ -318,6 +320,8 @@ body {
       }
 
       p { .fontSize10; }
+
+      .jspTrack { background: transparent; }
     }
   }
 }
