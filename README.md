@@ -1,4 +1,0 @@
-vital
-=====
-
-yulia vital
