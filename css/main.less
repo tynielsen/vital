@@ -91,7 +91,6 @@ body {
     .content {
       background-color: @ltGray;
       position: relative;
-      //overflow: hidden;
       height: 500px;
       max-height: 500px;
       max-width: 750px;
@@ -244,7 +243,7 @@ body {
     text-transform: uppercase;
     position: absolute;
     bottom: 5px;
-    right: -5%;
+    right: 0;
     margin: 0;
     .fontSize8;
   }
@@ -335,9 +334,10 @@ body {
 .legal-page {
 
   .content {
-    padding: 100px 14% 0;
     text-align: center;
     overflow-y: scroll;
+
+    .legal-content { padding: 83px 14% 40px; }
 
     h1 { margin-bottom: 25px; }
 
@@ -454,7 +454,7 @@ body {
         label {
           display: block;
           text-transform: uppercase;
-          margin-bottom: 8px;
+          margin-bottom: 15px;
           .fontSize10;
         }
 
@@ -469,6 +469,8 @@ body {
             border: 1px solid @black;
             background: @ltGray;
             outline: none;
+            padding-left: 10px;
+            text-transform: uppercase;
           }
 
           &.name-input {}
@@ -477,11 +479,12 @@ body {
             background: @black;
             border: none 0;
             color: @white;
-            text-transform: uppercase;
             display: block;
             margin: 0 auto 0;
             cursor: pointer;
           }
+
+          &.btn-subscribe { padding: 3px 6px 3px; }
         }
       }
     }
@@ -497,18 +500,17 @@ body {
 .stores-page {
 
   .content {
-    padding: 35px 10% 0;
     text-align: center;
-    height: auto !important;
 
     ul {
+      padding: 17px 8.7% 0;
 
       &:after { .clear; }
 
       li {
         width: 49%;
         float: left;
-        margin-bottom: 5px;
+        margin-top: 18px;
 
         &:nth-child(even) { margin-left: 2%; }
 
@@ -521,7 +523,6 @@ body {
           h4 {
             text-transform: uppercase;
             text-align: left;
-            height: 35px;
             font-size: 0.75em;
           }
         }
@@ -715,7 +716,7 @@ body {
       }
     }
     
-    .copyright { bottom: 4px; }
+    .copyright { bottom: -20px; }
   }
 }
 

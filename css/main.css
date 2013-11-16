@@ -137,6 +137,89 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+html:focus,
+body:focus,
+div:focus,
+span:focus,
+applet:focus,
+object:focus,
+iframe:focus,
+h1:focus,
+h2:focus,
+h3:focus,
+h4:focus,
+h5:focus,
+h6:focus,
+p:focus,
+blockquote:focus,
+pre:focus,
+a:focus,
+abbr:focus,
+acronym:focus,
+address:focus,
+big:focus,
+cite:focus,
+code:focus,
+del:focus,
+dfn:focus,
+em:focus,
+img:focus,
+ins:focus,
+kbd:focus,
+q:focus,
+s:focus,
+samp:focus,
+small:focus,
+strike:focus,
+strong:focus,
+sub:focus,
+sup:focus,
+tt:focus,
+var:focus,
+b:focus,
+u:focus,
+i:focus,
+center:focus,
+dl:focus,
+dt:focus,
+dd:focus,
+ol:focus,
+ul:focus,
+li:focus,
+fieldset:focus,
+form:focus,
+label:focus,
+legend:focus,
+table:focus,
+caption:focus,
+tbody:focus,
+tfoot:focus,
+thead:focus,
+tr:focus,
+th:focus,
+td:focus,
+article:focus,
+aside:focus,
+canvas:focus,
+details:focus,
+embed:focus,
+figure:focus,
+figcaption:focus,
+footer:focus,
+header:focus,
+hgroup:focus,
+menu:focus,
+nav:focus,
+output:focus,
+ruby:focus,
+section:focus,
+summary:focus,
+time:focus,
+mark:focus,
+audio:focus,
+video:focus {
+  outline: none;
+}
 /************************************************
  *
  *    Variables & Mixins
@@ -353,7 +436,7 @@ body .wrapper .content .section:after {
   text-transform: uppercase;
   position: absolute;
   bottom: 5px;
-  right: -5%;
+  right: 0;
   margin: 0;
   font-size: 0.667em;
 }
@@ -427,9 +510,11 @@ body .wrapper .content .section:after {
  *
  ************************************************/
 .legal-page .content {
-  padding: 100px 14% 0;
   text-align: center;
   overflow-y: scroll;
+}
+.legal-page .content .legal-content {
+  padding: 83px 14% 40px;
 }
 .legal-page .content h1 {
   margin-bottom: 25px;
@@ -531,7 +616,7 @@ body .wrapper .content .section:after {
 .newsletter-page .content .main-content form label {
   display: block;
   text-transform: uppercase;
-  margin-bottom: 8px;
+  margin-bottom: 15px;
   font-size: 0.834em;
 }
 .newsletter-page .content .main-content form input {
@@ -545,15 +630,19 @@ body .wrapper .content .section:after {
   border: 1px solid #000000;
   background: #f2f2f2;
   outline: none;
+  padding-left: 10px;
+  text-transform: uppercase;
 }
 .newsletter-page .content .main-content form input.btn-subscribe {
   background: #000000;
   border: none 0;
   color: #ffffff;
-  text-transform: uppercase;
   display: block;
   margin: 0 auto 0;
   cursor: pointer;
+}
+.newsletter-page .content .main-content form input.btn-subscribe {
+  padding: 3px 6px 3px;
 }
 /************************************************
  *
@@ -561,9 +650,10 @@ body .wrapper .content .section:after {
  *
  ************************************************/
 .stores-page .content {
-  padding: 35px 10% 0;
   text-align: center;
-  height: auto !important;
+}
+.stores-page .content ul {
+  padding: 17px 8.7% 0;
 }
 .stores-page .content ul:after {
   content: "";
@@ -575,7 +665,7 @@ body .wrapper .content .section:after {
 .stores-page .content ul li {
   width: 49%;
   float: left;
-  margin-bottom: 5px;
+  margin-top: 18px;
 }
 .stores-page .content ul li:nth-child(even) {
   margin-left: 2%;
@@ -586,7 +676,6 @@ body .wrapper .content .section:after {
 .stores-page .content ul li a h4 {
   text-transform: uppercase;
   text-align: left;
-  height: 35px;
   font-size: 0.75em;
 }
 /* ****************
@@ -730,6 +819,6 @@ body .wrapper .content .section:after {
     margin-left: 0;
   }
   .footer .copyright {
-    bottom: 4px;
+    bottom: -20px;
   }
 }

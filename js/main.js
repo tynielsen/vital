@@ -9,7 +9,7 @@ $(window).load(function() {
     var mh = $(window).outerHeight(true) - $('.header').outerHeight(true) - $('.footer').outerHeight(true);
     var dh = $('.hover-img').height();
 
-    $('.content, .section, .hover-img-container').css({
+    $('.content, .section, .hover-img-container, .carousel img').css({
       'max-height': mh,
       'height': dh
     });
