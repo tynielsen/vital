@@ -531,10 +531,6 @@ body .wrapper .content .section:after {
 .looks-page .content {
   text-align: center;
 }
-.looks-page .content .featured-looks-container {
-  width: 746px;
-  overflow-x: hidden;
-}
 .looks-page .content ul:after {
   content: "";
   display: block;
@@ -547,7 +543,68 @@ body .wrapper .content .section:after {
   height: auto;
   position: relative;
 }
-.looks-page .content ul li .summary {
+.looks-page .content .stage {
+  position: relative;
+}
+.looks-page .content .stage .prev,
+.looks-page .content .stage .next {
+  display: block;
+  width: 36px;
+  height: 92px;
+  text-indent: -9999px;
+  position: absolute;
+  top: 50%;
+  margin-top: -36px;
+}
+.looks-page .content .stage .prev:hover,
+.looks-page .content .stage .next:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+.looks-page .content .stage .prev {
+  background: url(../img/arrow-prev.png) no-repeat center;
+  left: 0;
+  -webkit-border-top-right-radius: 8px;
+  -moz-border-top-right-radius: 8px;
+  border-top-right-radius: 8px;
+  -webkit-border-bottom-right-radius: 8px;
+  -moz-border-bottom-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.looks-page .content .stage .next {
+  background: url(../img/arrow-next.png) no-repeat center;
+  right: 0;
+  -webkit-border-top-left-radius: 8px;
+  -moz-border-top-left-radius: 8px;
+  border-top-left-radius: 8px;
+  -webkit-border-bottom-left-radius: 8px;
+  -moz-border-bottom-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.looks-page .content .carousel-stage {
+  width: 746px;
+  overflow-x: hidden;
+  position: relative;
+}
+.looks-page .content .carousel-stage ul {
+  position: relative;
+  width: 10000px;
+  margin-bottom: 10px;
+}
+.looks-page .content .carousel-stage ul:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  line-height: 0;
+}
+.looks-page .content .carousel-stage ul li {
+  width: 245px;
+  margin: 0 5px 0 0;
+}
+.looks-page .content .carousel-stage ul li:last-child {
+  margin-right: 0;
+}
+.looks-page .content .carousel-stage ul li .summary {
   background: rgba(0, 0, 0, 0.34);
   width: 50px;
   height: 50px;
@@ -563,32 +620,35 @@ body .wrapper .content .section:after {
   -o-transition: opacity 0.25s ease-in-out;
   transition: opacity 0.25s ease-in-out;
 }
-.looks-page .content ul li:hover .summary {
+.looks-page .content .carousel-stage ul li:hover .summary {
   opacity: 1;
 }
-.looks-page .content ul.featured-looks {
-  margin-bottom: 20px;
-  width: 10000px;
-}
-.looks-page .content ul.featured-looks:after {
-  content: "";
-  display: block;
-  clear: both;
-  height: 0;
-  line-height: 0;
-}
-.looks-page .content ul.featured-looks li {
-  width: 245px;
+.looks-page .content .carousel-navigation ul li {
+  width: 120px;
   margin: 0 0 5px 5px;
+  position: relative;
 }
-.looks-page .content ul.featured-looks li:first-child {
-  margin-left: 0;
+.looks-page .content .carousel-navigation ul li.active .overlay {
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 245px;
+  height: 100%;
+  margin-left: -185px;
+  z-index: 1;
 }
-.looks-page .content ul.featured-looks-2 li {
-  width: 16%;
-  margin: 0 0 5px 0.8%;
+.looks-page .content .carousel-navigation ul li.active + li .overlay {
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 125px;
+  height: 100%;
+  margin-left: -5px;
+  z-index: 1;
 }
-.looks-page .content ul.featured-looks-2 li:nth-child(6n + 1) {
+.looks-page .content .carousel-navigation ul li:nth-child(6n + 1) {
   margin-left: 0;
 }
 /************************************************

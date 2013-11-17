@@ -359,11 +359,6 @@ body {
   .content {
     text-align: center;
 
-    .featured-looks-container {
-      width: 746px;
-      overflow-x: hidden;
-    }
-
     ul {
 
       &:after { .clear; }
@@ -372,50 +367,127 @@ body {
         float: left;
         height: auto;
         position: relative;
+      }
+    }
 
-        .summary {
-          background: rgba(0, 0, 0, 0.34);
-          width: 50px;
-          height: 50px;
-          color: @white;
-          padding: 10px;
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          opacity: 0;
-          -webkit-transition: opacity 0.25s ease-in-out;
-          -moz-transition: opacity 0.25s ease-in-out;
-          -ms-transition: opacity 0.25s ease-in-out;
-          -o-transition: opacity 0.25s ease-in-out;
-          transition: opacity 0.25s ease-in-out;
-        }
+    .stage {
+      position: relative;
+
+      .prev,
+      .next {
+        display: block;
+        width: 36px;
+        height: 92px;
+        text-indent: -9999px;
+        position: absolute;
+        top: 50%;
+        margin-top: -36px;
 
         &:hover {
-
-          .summary { opacity: 1; }
+          background-color: rgba(0, 0, 0, 0.08);
         }
       }
 
-      &.featured-looks {
-        margin-bottom: 20px;
+      .prev {
+        background: url(../img/arrow-prev.png) no-repeat center;
+        left: 0;
+        -webkit-border-top-right-radius: 8px;
+        -moz-border-top-right-radius: 8px;
+        border-top-right-radius: 8px;
+        -webkit-border-bottom-right-radius: 8px;
+        -moz-border-bottom-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+      }
+
+      .next {
+        background: url(../img/arrow-next.png) no-repeat center;
+        right: 0;
+        -webkit-border-top-left-radius: 8px;
+        -moz-border-top-left-radius: 8px;
+        border-top-left-radius: 8px;
+        -webkit-border-bottom-left-radius: 8px;
+        -moz-border-bottom-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+      }
+    }
+
+    .carousel-stage {
+      width: 746px;
+      overflow-x: hidden;
+      position: relative;
+
+      ul {
+        position: relative;
         width: 10000px;
+        margin-bottom: 10px;
 
         &:after { .clear; }
 
         li {
           width: 245px;
-          margin: 0 0 5px 5px;
+          margin: 0 5px 0 0;
 
-          &:first-child { margin-left: 0; }
+          &:last-child { margin-right: 0; }
           //&:nth-child(3n + 1) { margin-left: 0; }
+
+          .summary {
+            background: rgba(0, 0, 0, 0.34);
+            width: 50px;
+            height: 50px;
+            color: @white;
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            opacity: 0;
+            -webkit-transition: opacity 0.25s ease-in-out;
+            -moz-transition: opacity 0.25s ease-in-out;
+            -ms-transition: opacity 0.25s ease-in-out;
+            -o-transition: opacity 0.25s ease-in-out;
+            transition: opacity 0.25s ease-in-out;
+          }
+
+          &:hover {
+
+            .summary { opacity: 1; }
+          }
         }
       }
+    }
 
-      &.featured-looks-2 {
+    .carousel-navigation {
+      
+      ul {
 
         li {
-          width: 16%;
-          margin: 0 0 5px 0.8%;
+          width: 120px;
+          margin: 0 0 5px 5px;
+          position: relative;
+
+          &.active {
+            .overlay {
+              background: rgba(0, 0, 0, 0.4);
+              position: absolute;
+              top: 0;
+              left: 50%;
+              width: 245px;
+              height: 100%;
+              margin-left: -185px;
+              z-index: 1;
+            }
+          }
+          &.active + li {
+            .overlay {
+              background: rgba(0, 0, 0, 0.4);
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 125px;
+              height: 100%;
+              margin-left: -5px;
+              z-index: 1;
+            }
+          }
 
           &:nth-child(6n + 1) { margin-left: 0; }
         }
