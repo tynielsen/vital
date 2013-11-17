@@ -71,7 +71,7 @@ $(window).load(function() {
   // carousel functionalty
   if($('.carousel li').length > 1) {
     var sliderTime = 6000; //How long each slide shows
-    var fadeSpeed = 2000;
+    var fadeSpeed = 800;
 
     // slider fade in and out animation
     $('.carousel li:gt(0)').hide();

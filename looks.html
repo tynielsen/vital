@@ -212,7 +212,7 @@
     </div> <!-- /.footer -->
   </div> <!-- /.wrapper -->
 
-  <div id="featured-1" style="display:none;">
+  <div id="featured-1" class="generic-popup" style="display:none;">
     <img src="img/featured-img-1.jpg" alt="">
     <div class="details">
       <h3>Header</h3>
@@ -220,7 +220,7 @@
     </div>
   </div>
 
-  <div id="featured-2" style="display:none;">
+  <div id="featured-2" class="generic-popup" style="display:none;">
     <img src="img/featured-img-2.jpg" alt="">
     <div class="details">
       <h3>Header TWO</h3>
@@ -228,7 +228,7 @@
     </div>
   </div>
 
-  <div id="featured-3" style="display:none;">
+  <div id="featured-3" class="generic-popup" style="display:none;">
     <img src="img/featured-img-3.jpg" alt="">
     <div class="details">
       <h3>Header THREE</h3>
@@ -246,7 +246,7 @@
   <script type="text/javascript">
     $(function() {
 
-      $('.carousel-stage ul li a').fancybox();
+      $('.carousel-stage ul li a').fancybox({'padding': 0});
     });
 
   </script>
