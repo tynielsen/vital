@@ -213,7 +213,7 @@
   </div> <!-- /.wrapper -->
 
   <div id="featured-1" class="generic-popup" style="display:none;">
-    <img src="img/featured-img-3-large.jpg" alt="">
+    <img src="img/featured-img-3.jpg" alt="">
     <div class="details">
       <h3>Header</h3>
       <p>some text and other stuff</p>
@@ -221,7 +221,7 @@
   </div>
 
   <div id="featured-2" class="generic-popup" style="display:none;">
-    <img src="img/featured-img-3-large.jpg" alt="">
+    <img src="img/featured-img-3.jpg" alt="">
     <div class="details">
       <h3>Header TWO</h3>
       <p>some text and other stuff</p>
@@ -229,7 +229,7 @@
   </div>
 
   <div id="featured-3" class="generic-popup" style="display:none;">
-    <img src="img/featured-img-3-large.jpg" alt="">
+    <img src="img/featured-img-3.jpg" alt="">
     <div class="details">
       <h3>Header THREE</h3>
       <p>some text and other stuff</p>
@@ -240,6 +240,7 @@
   <script type="text/javascript" src="js/lib/jquery.mousewheel.js"></script>
   <script type="text/javascript" src="js/lib/jquery.jscrollpane.min.js"></script>
   <script type="text/javascript" src="js/lib/jquery.jcarousel.min.js"></script>
+  <script type="text/javascript" src="js/lib/jquery.zoom.min.js"></script>
   <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
 
@@ -248,9 +249,16 @@
 
       $('.carousel-stage ul li a').fancybox({'padding': 0});
 
-      jQuery('.carousel-stage')
+      $('.carousel-stage')
         .jcarousel({center: true})
         .jcarousel('scroll', 1);
+
+      $('.generic-popup').zoom({
+        url: 'img/featured-img-3-2.jpg',
+        on: 'click'
+      });
+
+
     });
 
   </script>

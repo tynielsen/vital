@@ -676,6 +676,9 @@ body .wrapper .content .section:after {
   top: 20px;
   right: 65px;
 }
+.looks-page .generic-popup img {
+  cursor: url(../img/zoom-in.cur), default;
+}
 /************************************************
  *
  *    Newsletter Section Styles
