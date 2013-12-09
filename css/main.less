@@ -83,8 +83,8 @@ body {
   strong { font-weight: 700; }
 
   .wrapper {
-    width: 73%;
-    max-width: 749px;
+    width: 88%;
+    max-width: 900px;
     position: relative;
     margin: 0 auto;
 
@@ -93,7 +93,7 @@ body {
       position: relative;
       height: 500px;
       max-height: 500px;
-      max-width: 750px;
+      max-width: 900px;
 
       .section {
         overflow: hidden;
@@ -128,6 +128,13 @@ body {
 }
 
 
+[class^="text-"] {
+  text-indent: -9999px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+
 /************************************************
  *
  *    Header & Navigation Styles
@@ -145,6 +152,7 @@ body {
 }
 
 /* Navigation Styles */
+
 .nav {
   zoom: 1;
 
@@ -202,6 +210,12 @@ body {
     }
 
     &.nav-1 {
+
+      .text-readyToWear {
+        background-image: url(../img/text-readyToWear.png);
+        width: 107px;
+        height: 11px;
+      }
       
       .dropdown {
         margin-left: -21%;
@@ -209,13 +223,26 @@ body {
     }
     
     &.nav-2 {
+
+      .text-discoverYuliaVital {
+        background-image: url(../img/text-discoverYuliaVital.png);
+        width: 152px;
+        height: 11px;
+      }
       
       .dropdown {
         margin-left: -30%;
       }
     }
     
-    &.nav-3 {}
+    &.nav-3 {
+
+      .text-stores {
+        background-image: url(../img/text-stores.png);
+        width: 51px;
+        height: 11px;
+      }
+    }
 
     &:hover {
 
@@ -237,15 +264,34 @@ body {
   .nav {
     width: 70%;
     margin: 0 auto;
+
+    .text-newsletter {
+      background-image: url(../img/text-newsletter.png);
+      width: 85px;
+      height: 11px;
+    }
+
+    .text-contact {
+      background-image: url(../img/text-contact.png);
+      width: 66px;
+      height: 11px;
+    }
+
+    .text-legal {
+      background-image: url(../img/text-legal.png);
+      width: 41px;
+      height: 11px;
+    }
   }
 
-  .copyright {
-    text-transform: uppercase;
+  .text-copyright {
+    background-image: url(../img/text-copyright.png);
+    width: 100px;
+    height: 9px;
     position: absolute;
     bottom: 5px;
     right: 0;
     margin: 0;
-    .fontSize8;
   }
 }
 
@@ -302,15 +348,15 @@ body {
   .content {
     background: url(../img/inspiration-main-bg.jpg) no-repeat center;
     color: @white;
-    padding: 0 0 0 13%;
+    padding: 100px 0 0 13%;
     overflow: hidden;
 
     .inspiration-text {
       float: left;
       width: 180px;
-      height: 499px;
+      height: 385px;
 
-      h1 { margin: 100px 0 15px; }
+      h1 { margin: 0 0 15px; }
 
       h1,
       p {

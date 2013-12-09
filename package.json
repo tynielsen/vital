@@ -1,0 +1,25 @@
+{
+  "name": "yulia-vital",
+  "version": "0.0.0",
+  "description": "",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tynielsen/vital.git"
+  },
+  "author": "Tyler Nielsen",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/tynielsen/vital/issues"
+  },
+  "homepage": "https://github.com/tynielsen/vital",
+  "devDependencies": {
+    "less": "~1.5.1",
+    "grunt": "~0.4.2",
+    "grunt-contrib-less": "~0.8.3",
+    "grunt-contrib-watch": "~0.5.3"
+  }
+}

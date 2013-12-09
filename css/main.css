@@ -299,8 +299,8 @@ body strong {
   font-weight: 700;
 }
 body .wrapper {
-  width: 73%;
-  max-width: 749px;
+  width: 88%;
+  max-width: 900px;
   position: relative;
   margin: 0 auto;
 }
@@ -309,7 +309,7 @@ body .wrapper .content {
   position: relative;
   height: 500px;
   max-height: 500px;
-  max-width: 750px;
+  max-width: 900px;
 }
 body .wrapper .content .section {
   overflow: hidden;
@@ -341,6 +341,11 @@ body .wrapper .content .section:after {
 .arrow-next {
   background: url(../img/arrow-next.png) no-repeat 0 0;
   right: -10%;
+}
+[class^="text-"] {
+  text-indent: -9999px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 /************************************************
  *
@@ -410,11 +415,26 @@ body .wrapper .content .section:after {
   height: 24px;
   vertical-align: middle;
 }
+.nav li.nav-1 .text-readyToWear {
+  background-image: url(../img/text-readyToWear.png);
+  width: 107px;
+  height: 11px;
+}
 .nav li.nav-1 .dropdown {
   margin-left: -21%;
 }
+.nav li.nav-2 .text-discoverYuliaVital {
+  background-image: url(../img/text-discoverYuliaVital.png);
+  width: 152px;
+  height: 11px;
+}
 .nav li.nav-2 .dropdown {
   margin-left: -30%;
+}
+.nav li.nav-3 .text-stores {
+  background-image: url(../img/text-stores.png);
+  width: 51px;
+  height: 11px;
 }
 .nav li:hover .dropdown {
   display: block;
@@ -432,13 +452,29 @@ body .wrapper .content .section:after {
   width: 70%;
   margin: 0 auto;
 }
-.footer .copyright {
-  text-transform: uppercase;
+.footer .nav .text-newsletter {
+  background-image: url(../img/text-newsletter.png);
+  width: 85px;
+  height: 11px;
+}
+.footer .nav .text-contact {
+  background-image: url(../img/text-contact.png);
+  width: 66px;
+  height: 11px;
+}
+.footer .nav .text-legal {
+  background-image: url(../img/text-legal.png);
+  width: 41px;
+  height: 11px;
+}
+.footer .text-copyright {
+  background-image: url(../img/text-copyright.png);
+  width: 100px;
+  height: 9px;
   position: absolute;
   bottom: 5px;
   right: 0;
   margin: 0;
-  font-size: 0.667em;
 }
 /************************************************
  *
@@ -483,16 +519,16 @@ body .wrapper .content .section:after {
 .inspiration-page .content {
   background: url(../img/inspiration-main-bg.jpg) no-repeat center;
   color: #ffffff;
-  padding: 0 0 0 13%;
+  padding: 100px 0 0 13%;
   overflow: hidden;
 }
 .inspiration-page .content .inspiration-text {
   float: left;
   width: 180px;
-  height: 499px;
+  height: 385px;
 }
 .inspiration-page .content .inspiration-text h1 {
-  margin: 100px 0 15px;
+  margin: 0 0 15px;
 }
 .inspiration-page .content .inspiration-text h1,
 .inspiration-page .content .inspiration-text p {
