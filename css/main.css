@@ -734,7 +734,7 @@ body .wrapper .content .section:after {
   position: relative;
 }
 .looks-page .content .carousel-navigation ul li {
-  width: 120px;
+  width: 145px;
   margin: 0 0 5px 5px;
   position: relative;
 }
@@ -763,8 +763,8 @@ body .wrapper .content .section:after {
 }
 .looks-page .content .carousel-navigation .overlay {
   background: rgba(0, 0, 0, 0.4);
-  width: 370px;
-  height: 180px;
+  width: 445px;
+  height: 217px;
   position: absolute;
   top: 0;
   left: 0;
