@@ -530,16 +530,16 @@ body {
       ul {
         position: relative;
         width: 10000px;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
 
         &:after { .clear; }
 
         li {
-          width: 245px;
-          margin: 0 5px 0 0;
+          width: 243px;
+          margin: 0 8px 0 0;
 
           .summary {
-            background: rgba(0, 0, 0, 0.34);
+            background: rgba(0, 0, 0, 0.4);
             display: none;
             width: 150px;
             color: @white;
@@ -607,6 +607,7 @@ body {
       position: relative;
       
       ul {
+        margin-left: -5px;
 
         li {
           width: 145px;
@@ -638,7 +639,7 @@ body {
             }
           }
 
-          &:nth-child(6n + 1) { margin-left: 0; }
+          //&:nth-child(5n + 1) { margin-left: 0; }
         }
       }
 
@@ -671,13 +672,30 @@ body {
   }
 
   .generic-popup {
-    width: 750px;
+    width: 100%;
+    min-width: 900px;
     height: 500px;
 
     .details {
+      width: 200px;
       position: absolute;
       top: 20px;
-      right: 65px;
+      right: 25px;
+
+      .item-number {
+        font-size: 0.875em;
+        margin-bottom: 10px;
+      }
+
+      h3 {
+        font-size: 1.2em;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+      }
+
+      p {
+        font-size: 0.625em;
+      }
     }
 
     img {

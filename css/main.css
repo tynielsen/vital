@@ -689,7 +689,7 @@ body .wrapper .content .section:after {
 .looks-page .content .carousel-stage ul {
   position: relative;
   width: 10000px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .looks-page .content .carousel-stage ul:after {
   content: "";
@@ -699,11 +699,11 @@ body .wrapper .content .section:after {
   line-height: 0;
 }
 .looks-page .content .carousel-stage ul li {
-  width: 245px;
-  margin: 0 5px 0 0;
+  width: 243px;
+  margin: 0 8px 0 0;
 }
 .looks-page .content .carousel-stage ul li .summary {
-  background: rgba(0, 0, 0, 0.34);
+  background: rgba(0, 0, 0, 0.4);
   display: none;
   width: 150px;
   color: #ffffff;
@@ -757,6 +757,9 @@ body .wrapper .content .section:after {
 .looks-page .content .carousel-navigation {
   position: relative;
 }
+.looks-page .content .carousel-navigation ul {
+  margin-left: -5px;
+}
 .looks-page .content .carousel-navigation ul li {
   width: 145px;
   margin: 0 0 5px 5px;
@@ -781,9 +784,6 @@ body .wrapper .content .section:after {
   height: 100%;
   margin-left: -5px;
   z-index: 1;
-}
-.looks-page .content .carousel-navigation ul li:nth-child(6n + 1) {
-  margin-left: 0;
 }
 .looks-page .content .carousel-navigation .overlay {
   background: rgba(0, 0, 0, 0.4);
@@ -810,13 +810,27 @@ body .wrapper .content .section:after {
   right: -32px;
 }
 .looks-page .generic-popup {
-  width: 750px;
+  width: 100%;
+  min-width: 900px;
   height: 500px;
 }
 .looks-page .generic-popup .details {
+  width: 200px;
   position: absolute;
   top: 20px;
-  right: 65px;
+  right: 25px;
+}
+.looks-page .generic-popup .details .item-number {
+  font-size: 0.875em;
+  margin-bottom: 10px;
+}
+.looks-page .generic-popup .details h3 {
+  font-size: 1.2em;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+.looks-page .generic-popup .details p {
+  font-size: 0.625em;
 }
 /************************************************
  *
