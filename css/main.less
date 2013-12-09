@@ -541,20 +541,47 @@ body {
           .summary {
             background: rgba(0, 0, 0, 0.34);
             display: none;
-            width: 200px;
-            height: 200px;
+            width: 150px;
             color: @white;
-            padding: 10px;
+            padding: 17px 7px 15px 17px;
             position: absolute;
-            top: 50%;
-            left: -100px;
-            margin-top: -100px;
+            top: 30%;
+            left: -50px;
             z-index: 10;
+            text-align: right;
             -webkit-transition: opacity 0.25s ease-in-out;
             -moz-transition: opacity 0.25s ease-in-out;
             -ms-transition: opacity 0.25s ease-in-out;
             -o-transition: opacity 0.25s ease-in-out;
             transition: opacity 0.25s ease-in-out;
+
+            .item-number {
+              font-size: 0.5425em;
+              margin-bottom: 4px;
+              line-height: 1;
+            }
+
+            h6 {
+              font-size: 0.7656em;
+              text-transform: uppercase;
+              margin-bottom: 10px;
+              line-height: 1.8;
+            }
+
+            .description {
+              font-size: 0.4043em;
+              margin-bottom: 0;
+            }
+          }
+
+          .vignette {
+            background: url(../img/vignette.png) no-repeat 0 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+            width: 100%;
+            height: 100%;
           }
 
           &:last-child { margin-right: 0; }
@@ -568,7 +595,8 @@ body {
           //&:nth-child(3n + 1) { margin-left: 0; }
 
           &:hover {
-
+            
+            .vignette,
             .summary { display: block; }
           }
         }

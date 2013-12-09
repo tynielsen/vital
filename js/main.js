@@ -141,7 +141,7 @@ $(window).load(function() {
                     $(item.prevAll('li')
                     .get()
                     .reverse())
-                    .appendTo('.carousel-navigation ul');
+                    .appendTo('.carousel-navigation ul')
                 })
                 .on('jcarouselcontrol:inactive', function() {
                     item.removeClass('active');
