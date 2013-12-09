@@ -505,7 +505,7 @@ body .wrapper .content .section:after {
   margin: 20px auto 7px;
 }
 .footer .nav {
-  width: 40%;
+  width: 375px;
   margin: 0 auto;
 }
 .footer .nav li:first-child {
@@ -628,8 +628,12 @@ body .wrapper .content .section:after {
  *    Looks Section Styles
  *
  ************************************************/
+.looks-page .wrapper {
+  width: 748px;
+}
 .looks-page .content {
   text-align: center;
+  width: 748px;
 }
 .looks-page .content ul:after {
   content: "";
