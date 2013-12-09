@@ -239,7 +239,7 @@
   <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
   <script type="text/javascript" src="js/lib/jquery.mousewheel.js"></script>
   <script type="text/javascript" src="js/lib/jquery.jscrollpane.min.js"></script>
-  <script type="text/javascript" src="js/lib/jquery.jcarousel.min.js"></script>
+  <script type="text/javascript" src="js/lib/jquery.jcarousel.js"></script>
   <script type="text/javascript" src="js/lib/jquery.zoom.min.js"></script>
   <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
@@ -250,16 +250,31 @@
       $('.carousel-stage ul li a').fancybox({'padding': 0});
 
       $('.carousel-stage')
-        .jcarousel({center: true})
+        .jcarousel({
+          wrap: 'circular',
+          center: true
+        })
         .jcarousel('scroll', 1);
 
-      $('.generic-popup').zoom({
-        url: 'img/featured-img-3-2.jpg',
-        on: 'click'
+      $('.prev')
+      .jcarouselControl({
+        target: '-=1'
       });
-
-
+      
+      $('.next')
+      .jcarouselControl({
+        target: '+=1'
+      });
     });
+
+
+      //$('.generic-popup').zoom({
+        //url: 'img/featured-img-3-2.jpg',
+        //on: 'click'
+      //});
+
+
+
 
   </script>
   
