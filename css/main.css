@@ -217,7 +217,10 @@ summary:focus,
 time:focus,
 mark:focus,
 audio:focus,
-video:focus {
+video:focus,
+button:focus,
+select:focus,
+input:focus {
   outline: none;
 }
 /************************************************
@@ -342,6 +345,12 @@ body .wrapper .content .section:after {
   background: url(../img/arrow-next.png) no-repeat 0 0;
   right: -10%;
 }
+::selection {
+  background: rgba(0, 0, 0, 0.1);
+}
+::-moz-selection {
+  background: #000000;
+}
 [class^="text-"] {
   text-indent: -9999px;
   background-repeat: no-repeat;
@@ -364,6 +373,8 @@ body .wrapper .content .section:after {
 /* Navigation Styles */
 .nav {
   zoom: 1;
+  width: 522px;
+  margin: auto;
 }
 .nav:after {
   content: "";
@@ -372,71 +383,116 @@ body .wrapper .content .section:after {
   height: 0;
   line-height: 0;
 }
-.nav li {
-  float: left;
-  width: 33.333333333333336%;
-  text-align: center;
+.nav > li {
+  display: inline-block;
   position: relative;
+  margin-left: 18%;
 }
-.nav li h5 {
+.nav > li:first-child {
+  margin-left: -65px;
+}
+.nav > li h5 {
   cursor: default;
 }
-.nav li a,
-.nav li h5 {
+.nav > li a,
+.nav > li h5 {
   display: inline-block;
   text-transform: uppercase;
 }
-.nav li .dropdown {
+.nav > li .dropdown {
   display: none;
   background: #ffffff;
-  width: 171px;
   margin-left: -30%;
-  padding: 45px 10% 20px;
+  padding: 45px 28% 20px;
   position: absolute;
   top: 15px;
   left: 50%;
   z-index: 10;
-  text-align: right;
 }
-.nav li .dropdown h3 {
-  text-transform: uppercase;
+.nav > li .dropdown h3 {
   margin-bottom: 30px;
 }
-.nav li .dropdown ul li {
-  width: auto;
-  text-align: right;
-  float: none;
+.nav > li .dropdown ul:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  line-height: 0;
 }
-.nav li .dropdown ul li:last-child {
+.nav > li .dropdown ul li {
+  width: auto;
+  float: right;
+}
+.nav > li .dropdown ul li:last-child {
   margin-bottom: 0;
 }
-.nav li .dropdown ul li a {
+.nav > li .dropdown ul li a {
   line-height: 24px;
   height: 24px;
   vertical-align: middle;
 }
-.nav li.nav-1 .text-readyToWear {
+.nav > li.nav-1 .text-readyToWear {
   background-image: url(../img/text-readyToWear.png);
   width: 107px;
   height: 11px;
 }
-.nav li.nav-1 .dropdown {
-  margin-left: -21%;
+.nav > li.nav-1 .dropdown {
+  width: 213px;
+  margin-left: -79%;
 }
-.nav li.nav-2 .text-discoverYuliaVital {
+.nav > li.nav-1 .dropdown .text-springSummer2014 {
+  background-image: url(../img/text-springSummer2014.png);
+  width: 152px;
+  height: 11px;
+}
+.nav > li.nav-1 .dropdown .text-inspiration {
+  background-image: url(../img/text-inspiration.png);
+  width: 83px;
+  height: 11px;
+  margin-left: 72px;
+}
+.nav > li.nav-1 .dropdown .text-looks {
+  background-image: url(../img/text-looks.png);
+  width: 46px;
+  height: 10px;
+  margin-left: 114px;
+}
+.nav > li.nav-1 .dropdown .text-campaign {
+  background-image: url(../img/text-campaign.png);
+  width: 70px;
+  height: 11px;
+  margin-left: 92px;
+}
+.nav > li.nav-2 .text-discoverYuliaVital {
   background-image: url(../img/text-discoverYuliaVital.png);
   width: 152px;
   height: 11px;
 }
-.nav li.nav-2 .dropdown {
-  margin-left: -30%;
+.nav > li.nav-2 .dropdown {
+  width: 157px;
+  margin-left: -52%;
 }
-.nav li.nav-3 .text-stores {
+.nav > li.nav-2 .dropdown .text-facebook {
+  background-image: url(../img/text-facebook.png);
+  width: 72px;
+  height: 11px;
+}
+.nav > li.nav-2 .dropdown .text-twitter {
+  background-image: url(../img/text-twitter.png);
+  width: 56px;
+  height: 10px;
+}
+.nav > li.nav-2 .dropdown .text-pinterest {
+  background-image: url(../img/text-pinterest.png);
+  width: 71px;
+  height: 11px;
+}
+.nav > li.nav-3 .text-stores {
   background-image: url(../img/text-stores.png);
   width: 51px;
   height: 11px;
 }
-.nav li:hover .dropdown {
+.nav > li:hover .dropdown {
   display: block;
 }
 /************************************************
@@ -449,8 +505,11 @@ body .wrapper .content .section:after {
   margin: 20px auto 7px;
 }
 .footer .nav {
-  width: 70%;
+  width: 40%;
   margin: 0 auto;
+}
+.footer .nav li:first-child {
+  margin-left: 0;
 }
 .footer .nav .text-newsletter {
   background-image: url(../img/text-newsletter.png);
@@ -530,6 +589,11 @@ body .wrapper .content .section:after {
 .inspiration-page .content .inspiration-text h1 {
   margin: 0 0 15px;
 }
+.inspiration-page .content .inspiration-text h1.text-header-inspiration {
+  background-image: url(../img/text-header-inspiration.png);
+  width: 136px;
+  height: 16px;
+}
 .inspiration-page .content .inspiration-text h1,
 .inspiration-page .content .inspiration-text p {
   width: 144px;
@@ -591,10 +655,6 @@ body .wrapper .content .section:after {
   position: absolute;
   top: 50%;
   margin-top: -36px;
-}
-.looks-page .content .stage .prev:hover,
-.looks-page .content .stage .next:hover {
-  background-color: rgba(0, 0, 0, 0.05);
 }
 .looks-page .content .stage .prev {
   background: url(../img/arrow-prev.png) no-repeat center;
@@ -732,16 +792,44 @@ body .wrapper .content .section:after {
 .newsletter-page .content .main-content h1 {
   margin-bottom: 30px;
 }
+.newsletter-page .content .main-content h1.text-header-newsletter {
+  background-image: url(../img/text-header-newsletter.png);
+  width: 140px;
+  height: 17px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .newsletter-page .content .main-content p {
   text-transform: uppercase;
   margin-bottom: 45px;
   font-size: 0.834em;
+}
+.newsletter-page .content .main-content p.text-keepInTouch {
+  background-image: url(../img/text-keepInTouch.png);
+  width: 220px;
+  height: 9px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .newsletter-page .content .main-content form label {
   display: block;
   text-transform: uppercase;
   margin-bottom: 10px;
   font-size: 0.834em;
+}
+.newsletter-page .content .main-content form label.text-name {
+  background-image: url(../img/text-name.png);
+  width: 32px;
+  height: 9px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.newsletter-page .content .main-content form label.text-emailAddress {
+  background-image: url(../img/text-emailAddress.png);
+  width: 95px;
+  height: 9px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .newsletter-page .content .main-content form input {
   display: block;
@@ -766,7 +854,9 @@ body .wrapper .content .section:after {
   cursor: pointer;
 }
 .newsletter-page .content .main-content form input.btn-subscribe {
-  padding: 3px 6px 3px;
+  background-image: url(../img/btn-send.jpg);
+  width: 41px;
+  height: 19px;
 }
 /************************************************
  *
