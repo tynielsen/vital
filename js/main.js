@@ -141,7 +141,10 @@ $(window).load(function() {
                     $(item.prevAll('li')
                     .get()
                     .reverse())
-                    .appendTo('.carousel-navigation ul')
+                    .appendTo('.carousel-navigation ul');
+
+                    //slide back up to featured images
+                    $('.jspPane').animate({'top': 0}, 'slow');
                 })
                 .on('jcarouselcontrol:inactive', function() {
                     item.removeClass('active');
