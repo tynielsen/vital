@@ -138,7 +138,10 @@ $(window).load(function() {
             item
                 .on('jcarouselcontrol:active', function() {
                     carouselNavigation.jcarousel('scrollIntoView', this);
-                    item.addClass('active');
+                    $(item.prevAll('li')
+                    .get()
+                    .reverse())
+                    .appendTo('.carousel-navigation ul');
                 })
                 .on('jcarouselcontrol:inactive', function() {
                     item.removeClass('active');

@@ -730,6 +730,9 @@ body .wrapper .content .section:after {
 .looks-page .content .carousel-stage ul li:hover .summary {
   display: block;
 }
+.looks-page .content .carousel-navigation {
+  position: relative;
+}
 .looks-page .content .carousel-navigation ul li {
   width: 120px;
   margin: 0 0 5px 5px;
@@ -757,6 +760,14 @@ body .wrapper .content .section:after {
 }
 .looks-page .content .carousel-navigation ul li:nth-child(6n + 1) {
   margin-left: 0;
+}
+.looks-page .content .carousel-navigation .overlay {
+  background: rgba(0, 0, 0, 0.4);
+  width: 370px;
+  height: 180px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .looks-page .fancybox-wrap {
   margin-top: 46px;

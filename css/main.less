@@ -576,6 +576,7 @@ body {
     }
 
     .carousel-navigation {
+      position: relative;
       
       ul {
 
@@ -611,6 +612,15 @@ body {
 
           &:nth-child(6n + 1) { margin-left: 0; }
         }
+      }
+
+      .overlay {
+        background: rgba(0, 0, 0, 0.4);
+        width: 370px;
+        height: 180px;
+        position: absolute;
+        top: 0;
+        left: 0;
       }
     }
   }
