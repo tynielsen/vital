@@ -140,8 +140,10 @@ $(window).load(function() {
                     .reverse())
                     .appendTo('.carousel-navigation ul');
 
-                    //slide back up to featured images
-                    $('.jspPane').animate({'top': 0}, 'slow');
+                    //subtle slide back up to featured images
+                    $('body').animate({
+                      scrollTop: 0
+                    }, 'slow');
                 })
                 .on('jcarouselcontrol:inactive', function() {
                     item.removeClass('active');
