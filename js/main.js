@@ -1,8 +1,5 @@
 $(window).load(function() {
-  $('.scroll-pane').jScrollPane({
-    autoReinitialise: true,
-    verticalGutter: 0
-  });
+  
 
   //Keeping it responsive while avoiding vertical scroll bars ..always
   var verticalResize = function() {

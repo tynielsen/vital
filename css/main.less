@@ -94,6 +94,7 @@ body {
       height: 500px;
       max-height: 500px;
       max-width: 800px;
+      margin-top: 135px;
 
       .section {
         overflow: hidden;
@@ -146,7 +147,15 @@ body {
  ************************************************/
 .header {
   text-align: center;
-  margin: 26px auto 17px;
+  padding: 26px 0 17px;
+  margin: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: @white;
+  z-index: 1000;
+  margin: auto;
   
   .logo {
     display: block;
@@ -311,8 +320,18 @@ body {
  *
  ************************************************/
 .footer {
-  position: relative;
-  margin: 20px auto 7px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 0 7px;
+  background: @white;
+
+  .footer-content {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+  }
 
   .nav {
     width: 375px;
@@ -459,7 +478,6 @@ body {
     background: url(../img/inspiration-main-bg.jpg) no-repeat center;
     color: @white;
     padding: 100px 0 0 13%;
-    overflow: hidden;
 
     .inspiration-text {
       float: left;
@@ -498,9 +516,11 @@ body {
 
   .content {
     text-align: center;
-    overflow-y: scroll;
 
-    .legal-content { padding: 83px 14% 40px; }
+    .legal-content {
+      padding: 83px 14% 63px;
+      background: @ltGray;
+    }
 
     h1 {
       margin-bottom: 25px;
@@ -533,8 +553,13 @@ body {
   
   .content {
     text-align: center;
+    width: 800px;
     //width: 748px;
     //height: 500px !important;
+
+    .connected-carousels {
+      padding-bottom: 43px;
+    }
 
     ul {
 
@@ -666,6 +691,14 @@ body {
             
             .vignette,
             .summary { display: block; }
+          }
+
+          &:not(.visible) + .visible {
+
+            .summary {
+              left: auto;
+              right: -50px;
+            }
           }
         }
       }

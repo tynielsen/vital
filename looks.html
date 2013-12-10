@@ -51,7 +51,7 @@
       </ul>
     </div> <!-- /.header -->
 
-    <div class="content scroll-pane">
+    <div class="content">
       <div class="connected-carousels">
         
         <div class="stage">
@@ -420,12 +420,14 @@
     </div> <!-- /.content -->
 
     <div class="footer">
-      <ul class="nav">
-        <li class="internal"><a id="newsletter" class="text-newsletter" href="newsletter.html">Newsletter</a></li>
-        <li class="internal"><a id="contact" class="text-contact" href="contact.html">Contact</a></li>
-        <li class="internal"><a id="legal" class="text-legal" href="legal.html">Legal</a></li>
-      </ul>
-      <p class="text-copyright">&copy; 2013 Yulia Vital</p>
+      <div class="footer-content">
+        <ul class="nav">
+          <li class="internal"><a id="newsletter" class="text-newsletter" href="newsletter.html">Newsletter</a></li>
+          <li class="internal"><a id="contact" class="text-contact" href="contact.html">Contact</a></li>
+          <li class="internal"><a id="legal" class="text-legal" href="legal.html">Legal</a></li>
+        </ul>
+        <p class="text-copyright">&copy; 2013 Yulia Vital</p>
+      </div> <!-- /.footer-content -->
     </div> <!-- /.footer -->
   </div> <!-- /.wrapper -->
 
@@ -503,9 +505,17 @@
   <script type="text/javascript" src="js/main.js"></script>
 
   <script type="text/javascript">
-    $(function() {
+    $(function() {   
 
       $('.carousel-stage ul li a').fancybox({'padding': 0});
+
+      $('.carousel-stage').on('jcarousel:scrollend', function(event, carousel) {
+
+        var first = $('.carousel-stage').jcarousel('visible');
+        
+        $('.carousel-stage li').removeClass('visible'); 
+        first.addClass('visible');
+      });
 
       $('.carousel-stage')
         .jcarousel({

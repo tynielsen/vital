@@ -313,6 +313,7 @@ body .wrapper .content {
   height: 500px;
   max-height: 500px;
   max-width: 800px;
+  margin-top: 135px;
 }
 body .wrapper .content .section {
   overflow: hidden;
@@ -363,7 +364,14 @@ body .wrapper .content .section:after {
  ************************************************/
 .header {
   text-align: center;
-  margin: 26px auto 17px;
+  padding: 26px 0 17px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  z-index: 1000;
+  margin: auto;
 }
 .header .logo {
   display: block;
@@ -502,8 +510,17 @@ body .wrapper .content .section:after {
  *
  ************************************************/
 .footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 0 7px;
+  background: #ffffff;
+}
+.footer .footer-content {
   position: relative;
-  margin: 20px auto 7px;
+  max-width: 800px;
+  margin: auto;
 }
 .footer .nav {
   width: 375px;
@@ -627,7 +644,6 @@ body .wrapper .content .section:after {
   background: url(../img/inspiration-main-bg.jpg) no-repeat center;
   color: #ffffff;
   padding: 100px 0 0 13%;
-  overflow: hidden;
 }
 .inspiration-page .content .inspiration-text {
   float: left;
@@ -659,10 +675,10 @@ body .wrapper .content .section:after {
  ************************************************/
 .legal-page .content {
   text-align: center;
-  overflow-y: scroll;
 }
 .legal-page .content .legal-content {
-  padding: 83px 14% 40px;
+  padding: 83px 14% 63px;
+  background: #f2f2f2;
 }
 .legal-page .content h1 {
   margin-bottom: 25px;
@@ -685,6 +701,10 @@ body .wrapper .content .section:after {
  ************************************************/
 .looks-page .content {
   text-align: center;
+  width: 800px;
+}
+.looks-page .content .connected-carousels {
+  padding-bottom: 43px;
 }
 .looks-page .content ul:after {
   content: "";
@@ -792,6 +812,10 @@ body .wrapper .content .section:after {
 .looks-page .content .carousel-stage ul li:hover .vignette,
 .looks-page .content .carousel-stage ul li:hover .summary {
   display: block;
+}
+.looks-page .content .carousel-stage ul li:not(.visible) + .visible .summary {
+  left: auto;
+  right: -50px;
 }
 .looks-page .content .carousel-navigation {
   position: relative;
