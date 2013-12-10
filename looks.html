@@ -503,46 +503,6 @@
   <script type="text/javascript" src="js/lib/jquery.zoom.min.js"></script>
   <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
-
-  <script type="text/javascript">
-    $(function() {   
-
-      $('.carousel-stage ul li a').fancybox({'padding': 0});
-
-      $('.carousel-stage').on('jcarousel:scrollend', function(event, carousel) {
-
-        var first = $('.carousel-stage').jcarousel('visible');
-        
-        $('.carousel-stage li').removeClass('visible'); 
-        first.addClass('visible');
-      });
-
-      $('.carousel-stage')
-        .jcarousel({
-          wrap: 'circular'
-          //center: true
-        })
-        .jcarousel('scroll', 1);
-
-      $('.prev')
-      .jcarouselControl({
-        target: '-=1'
-      });
-      
-      $('.next')
-      .jcarouselControl({
-        target: '+=1'
-      });
-    
-      //Zoom in effect for looks page images
-      //$('.generic-popup').zoom({
-        //url: 'img/featured-img-3-2.jpg',
-        //on: 'click'
-      //});
-
-    });
-
-  </script>
   
 </body>
 </html>
