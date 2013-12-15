@@ -446,7 +446,7 @@ body .wrapper .content .section:after {
   height: 11px;
 }
 .nav > li.nav-1 .dropdown {
-  width: 214px;
+  width: 220px;
   margin-left: -50%;
 }
 .nav > li.nav-1 .dropdown .text-springSummer2014 {
@@ -478,8 +478,14 @@ body .wrapper .content .section:after {
   height: 11px;
 }
 .nav > li.nav-2 .dropdown {
-  width: 157px;
+  width: 223px;
   margin-left: -52%;
+  padding: 42px 32px 22px;
+}
+.nav > li.nav-2 .dropdown ul li {
+  text-align: left;
+  float: none;
+  margin-bottom: 19px;
 }
 .nav > li.nav-2 .dropdown .text-facebook {
   background-image: url(../img/text-facebook.png);
@@ -701,9 +707,10 @@ body .wrapper .content .section:after {
  ************************************************/
 .looks-page .content {
   text-align: center;
-  width: 800px;
+  width: 798px;
 }
 .looks-page .content .connected-carousels {
+  background: #f2f2f2;
   padding-bottom: 43px;
 }
 .looks-page .content ul:after {
@@ -721,27 +728,27 @@ body .wrapper .content .section:after {
 .looks-page .content .stage {
   position: relative;
 }
-.looks-page .content .stage .prev,
-.looks-page .content .stage .next {
+.looks-page .content .prev,
+.looks-page .content .next {
   display: block;
   width: 16px;
   height: 72px;
   text-indent: -9999px;
   position: absolute;
   top: 50%;
-  margin-top: -36px;
+  margin-top: -101px;
   z-index: 100;
 }
-.looks-page .content .stage .prev {
+.looks-page .content .prev {
   background: url(../img/arrow-prev.png) no-repeat center;
-  left: 2%;
+  left: -4%;
 }
-.looks-page .content .stage .next {
+.looks-page .content .next {
   background: url(../img/arrow-next.png) no-repeat center;
-  right: 2%;
+  right: -4%;
 }
 .looks-page .content .carousel-stage {
-  width: 800px;
+  width: 798px;
   overflow-x: hidden;
   position: relative;
 }
@@ -764,12 +771,12 @@ body .wrapper .content .section:after {
 .looks-page .content .carousel-stage ul li .summary {
   background: rgba(0, 0, 0, 0.4);
   display: none;
-  width: 150px;
+  width: 175px;
   color: #ffffff;
-  padding: 17px 7px 15px 17px;
+  padding: 17px 8px 14px 14px;
   position: absolute;
   top: 30%;
-  left: -50px;
+  left: -120px;
   z-index: 10;
   text-align: right;
   -webkit-transition: opacity 0.25s ease-in-out;
@@ -780,17 +787,17 @@ body .wrapper .content .section:after {
 }
 .looks-page .content .carousel-stage ul li .summary .item-number {
   font-size: 0.5425em;
-  margin-bottom: 4px;
+  margin: -9px 0 0;
   line-height: 1;
 }
 .looks-page .content .carousel-stage ul li .summary h6 {
-  font-size: 0.7656em;
+  font-size: 0.8em;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin-bottom: 4px;
   line-height: 1.8;
 }
 .looks-page .content .carousel-stage ul li .summary .description {
-  font-size: 0.4043em;
+  font-size: 0.7em;
   margin-bottom: 0;
 }
 .looks-page .content .carousel-stage ul li .vignette {
@@ -805,17 +812,13 @@ body .wrapper .content .section:after {
 .looks-page .content .carousel-stage ul li:last-child {
   margin-right: 0;
 }
-.looks-page .content .carousel-stage ul li:first-child .summary {
-  left: auto;
-  right: -100px;
-}
 .looks-page .content .carousel-stage ul li:hover .vignette,
 .looks-page .content .carousel-stage ul li:hover .summary {
   display: block;
 }
 .looks-page .content .carousel-stage ul li:not(.visible) + .visible .summary {
   left: auto;
-  right: -50px;
+  right: -120px;
 }
 .looks-page .content .carousel-navigation {
   position: relative;
@@ -851,7 +854,7 @@ body .wrapper .content .section:after {
 .looks-page .content .carousel-navigation .overlay {
   background: rgba(0, 0, 0, 0.4);
   width: 476px;
-  height: 233px;
+  height: 222px;
   position: absolute;
   top: 0;
   left: 0;
@@ -987,7 +990,7 @@ body .wrapper .content .section:after {
   text-align: center;
 }
 .stores-page .content ul {
-  padding: 12px 6% 0;
+  padding: 12px 8% 0;
 }
 .stores-page .content ul:after {
   content: "";
@@ -999,7 +1002,7 @@ body .wrapper .content .section:after {
 .stores-page .content ul li {
   width: 49%;
   float: left;
-  margin-top: 10px;
+  margin-top: 12px;
 }
 .stores-page .content ul li:nth-child(even) {
   margin-left: 2%;

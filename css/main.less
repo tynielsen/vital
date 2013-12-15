@@ -233,7 +233,7 @@ body {
       }
       
       .dropdown {
-        width: 214px;
+        width: 220px;
         margin-left: -50%;
 
         .text-springSummer2014 {
@@ -274,8 +274,18 @@ body {
       }
       
       .dropdown {
-        width: 157px;
+        width: 223px;
         margin-left: -52%;
+        padding: 42px 32px 22px;
+
+        ul {
+
+          li {
+            text-align: left;
+            float: none;
+            margin-bottom: 19px;
+          }
+        }
 
         .text-facebook {
           background-image: url(../img/text-facebook.png);
@@ -553,11 +563,12 @@ body {
   
   .content {
     text-align: center;
-    width: 800px;
+    width: 798px;
     //width: 748px;
     //height: 500px !important;
 
     .connected-carousels {
+      background: #f2f2f2;
       padding-bottom: 43px;
     }
 
@@ -574,48 +585,48 @@ body {
 
     .stage {
       position: relative;
+    }
 
-      .prev,
-      .next {
-        display: block;
-        width: 16px;
-        height: 72px;
-        text-indent: -9999px;
-        position: absolute;
-        top: 50%;
-        margin-top: -36px;
-        z-index: 100;
+    .prev,
+    .next {
+      display: block;
+      width: 16px;
+      height: 72px;
+      text-indent: -9999px;
+      position: absolute;
+      top: 50%;
+      margin-top: -101px;
+      z-index: 100;
 
-        &:hover {
-          //background-color: rgba(0, 0, 0, 0.05);
-        }
-      }
-
-      .prev {
-        background: url(../img/arrow-prev.png) no-repeat center;
-        left: 2%;
-        //-webkit-border-top-right-radius: 8px;
-        //-moz-border-top-right-radius: 8px;
-        //border-top-right-radius: 8px;
-        //-webkit-border-bottom-right-radius: 8px;
-        //-moz-border-bottom-right-radius: 8px;
-        //border-bottom-right-radius: 8px;
-      }
-
-      .next {
-        background: url(../img/arrow-next.png) no-repeat center;
-        right: 2%;
-        //-webkit-border-top-left-radius: 8px;
-        //-moz-border-top-left-radius: 8px;
-        //border-top-left-radius: 8px;
-        //-webkit-border-bottom-left-radius: 8px;
-        //-moz-border-bottom-left-radius: 8px;
-        //border-bottom-left-radius: 8px;
+      &:hover {
+        //background-color: rgba(0, 0, 0, 0.05);
       }
     }
 
+    .prev {
+      background: url(../img/arrow-prev.png) no-repeat center;
+      left: -4%;
+      //-webkit-border-top-right-radius: 8px;
+      //-moz-border-top-right-radius: 8px;
+      //border-top-right-radius: 8px;
+      //-webkit-border-bottom-right-radius: 8px;
+      //-moz-border-bottom-right-radius: 8px;
+      //border-bottom-right-radius: 8px;
+    }
+
+    .next {
+      background: url(../img/arrow-next.png) no-repeat center;
+      right: -4%;
+      //-webkit-border-top-left-radius: 8px;
+      //-moz-border-top-left-radius: 8px;
+      //border-top-left-radius: 8px;
+      //-webkit-border-bottom-left-radius: 8px;
+      //-moz-border-bottom-left-radius: 8px;
+      //border-bottom-left-radius: 8px;
+    }
+
     .carousel-stage {
-      width: 800px;
+      width: 798px;
       overflow-x: hidden;
       position: relative;
 
@@ -634,12 +645,12 @@ body {
           .summary {
             background: rgba(0, 0, 0, 0.4);
             display: none;
-            width: 150px;
+            width: 175px;
             color: @white;
-            padding: 17px 7px 15px 17px;
+            padding: 17px 8px 14px 14px;
             position: absolute;
             top: 30%;
-            left: -50px;
+            left: -120px;
             z-index: 10;
             text-align: right;
             -webkit-transition: opacity 0.25s ease-in-out;
@@ -650,19 +661,19 @@ body {
 
             .item-number {
               font-size: 0.5425em;
-              margin-bottom: 4px;
+              margin: -9px 0 0;
               line-height: 1;
             }
 
             h6 {
-              font-size: 0.7656em;
+              font-size: 0.8em;
               text-transform: uppercase;
-              margin-bottom: 10px;
+              margin-bottom: 4px;
               line-height: 1.8;
             }
 
             .description {
-              font-size: 0.4043em;
+              font-size: 0.7em;
               margin-bottom: 0;
             }
           }
@@ -678,14 +689,6 @@ body {
           }
 
           &:last-child { margin-right: 0; }
-          &:first-child {
-
-            .summary {
-              left: auto;
-              right: -100px;
-            }
-          }
-          //&:nth-child(3n + 1) { margin-left: 0; }
 
           &:hover {
             
@@ -697,7 +700,7 @@ body {
 
             .summary {
               left: auto;
-              right: -50px;
+              right: -120px;
             }
           }
         }
@@ -747,7 +750,7 @@ body {
       .overlay {
         background: rgba(0, 0, 0, 0.4);
         width: 476px;
-        height: 233px;
+        height: 222px;
         position: absolute;
         top: 0;
         left: 0;
@@ -923,14 +926,14 @@ body {
     text-align: center;
 
     ul {
-      padding: 12px 6% 0;
+      padding: 12px 8% 0;
 
       &:after { .clear; }
 
       li {
         width: 49%;
         float: left;
-        margin-top: 10px;
+        margin-top: 12px;
 
         &:nth-child(even) { margin-left: 2%; }
 
