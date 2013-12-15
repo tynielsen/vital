@@ -58,13 +58,13 @@
 
         <p class="text-keepInTouch">Keep  In  Touch  With yuliavital.com</p>
 
-        <form action="">
+        <form action="FormToEmail.php" method="post" enctype="multipart/form-data">
           
           <label for="name-input" class="text-name">Name</label>
-          <input class="name-input" id="name-input" type="text">
+          <input class="name-input" name="name" id="name-input" type="text">
           
           <label for="email-input" class="text-emailAddress">E-Mail Address</label>
-          <input type="text" id="email-input" class="email-input">
+          <input type="text" name="email" id="email-input" class="email-input">
           
           <input type="submit" class="btn-subscribe" value="" alt="send">
         </form>

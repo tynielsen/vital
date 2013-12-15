@@ -484,15 +484,24 @@ body {
  ************************************************/
 .inspiration-page {
 
+  .insp-bg {
+    width: 800px;
+    position: fixed;
+    top: 135px;
+    left: 50%;
+    margin-left: -400px;
+  }
+
   .content {
-    background: url(../img/inspiration-main-bg.jpg) no-repeat center;
+    background: transparent;
     color: @white;
     padding: 100px 0 0 13%;
 
     .inspiration-text {
+      position: relative;
       float: left;
       width: 180px;
-      height: 385px;
+      margin-bottom: 143px;
 
       h1 {
         margin: 0 0 15px;
@@ -563,7 +572,7 @@ body {
   
   .content {
     text-align: center;
-    width: 798px;
+    width: 800px;
     //width: 748px;
     //height: 500px !important;
 
@@ -626,7 +635,7 @@ body {
     }
 
     .carousel-stage {
-      width: 798px;
+      width: 800px;
       overflow-x: hidden;
       position: relative;
 
@@ -715,7 +724,7 @@ body {
 
         li {
           width: 156px;
-          margin: 0 0 5px 0.555%;
+          margin: 0 0 5px 5px;
           position: relative;
 
           &.active {
@@ -749,7 +758,7 @@ body {
 
       .overlay {
         background: rgba(0, 0, 0, 0.4);
-        width: 476px;
+        width: 478px;
         height: 222px;
         position: absolute;
         top: 0;

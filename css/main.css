@@ -646,15 +646,23 @@ body .wrapper .content .section:after {
  *    Inspiration Section Styles
  *
  ************************************************/
+.inspiration-page .insp-bg {
+  width: 800px;
+  position: fixed;
+  top: 135px;
+  left: 50%;
+  margin-left: -400px;
+}
 .inspiration-page .content {
-  background: url(../img/inspiration-main-bg.jpg) no-repeat center;
+  background: transparent;
   color: #ffffff;
   padding: 100px 0 0 13%;
 }
 .inspiration-page .content .inspiration-text {
+  position: relative;
   float: left;
   width: 180px;
-  height: 385px;
+  margin-bottom: 143px;
 }
 .inspiration-page .content .inspiration-text h1 {
   margin: 0 0 15px;
@@ -707,7 +715,7 @@ body .wrapper .content .section:after {
  ************************************************/
 .looks-page .content {
   text-align: center;
-  width: 798px;
+  width: 800px;
 }
 .looks-page .content .connected-carousels {
   background: #f2f2f2;
@@ -748,7 +756,7 @@ body .wrapper .content .section:after {
   right: -4%;
 }
 .looks-page .content .carousel-stage {
-  width: 798px;
+  width: 800px;
   overflow-x: hidden;
   position: relative;
 }
@@ -828,7 +836,7 @@ body .wrapper .content .section:after {
 }
 .looks-page .content .carousel-navigation ul li {
   width: 156px;
-  margin: 0 0 5px 0.555%;
+  margin: 0 0 5px 5px;
   position: relative;
 }
 .looks-page .content .carousel-navigation ul li.active .overlay {
@@ -853,7 +861,7 @@ body .wrapper .content .section:after {
 }
 .looks-page .content .carousel-navigation .overlay {
   background: rgba(0, 0, 0, 0.4);
-  width: 476px;
+  width: 478px;
   height: 222px;
   position: absolute;
   top: 0;
