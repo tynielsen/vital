@@ -1083,11 +1083,12 @@ body .wrapper .content .section:after {
  *********************************************** */
 .hover-img-container {
   overflow: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  position: fixed;
+  top: 135px;
+  left: 50%;
+  width: 800px;
   z-index: -1;
+  margin-left: -400px;
 }
 .campaign-hover,
 .contact-hover,
