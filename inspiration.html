@@ -95,10 +95,28 @@
   <script type=text/javascript>
     $(function() {
       
+      //custom scroll bar
       $('.scroll-pane').jScrollPane({
-        autoReinitialise: true,
+        autoReinitialise: false,
         verticalGutter: 0
       });
+
+
+      setTimeout(function() {
+        $('.jspDrag').fadeOut('slow');
+      }, 4000);
+
+      //show and hide the scrollbar depending on if moving
+      var timer;
+      $('.scroll-pane').on('scroll',function () {
+          clearTimeout(timer);
+          timer = setTimeout( refresh , 600 );
+          $('.jspDrag').fadeIn('fast');
+      });
+      
+      var refresh = function () { 
+          $('.jspDrag').fadeOut('fast');
+      };
     
     });
   </script>
